@@ -24,19 +24,30 @@ function main() {
                 break;
             case 'Add employee':
                 addEmployees();
+                break;
             case 'Update employee role':
                 updateEmployees();
+                break;
             case 'View all roles':
                 viewRoles();
+                break;
             case 'Add role':
                 addRoles();
+                break;
             case 'View all Departments':
                 viewDepartments();
+                break;
             case 'Add departments':
                 addDepartments();
-            default:
+                break;
+            case 'Exit':
                 client.end();
                 process.exit();
+                break;
+            default:
+                console.log('invalid choice');
+                main();
+                break;
         }
     });
 }
